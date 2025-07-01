@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pr-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Aula 3</title>
+        <style>
+            h1 {
+                background-color: gray;
+            }
+            h1 {
+                background-color: blue;
+            }
+            .fundo-vermelho {
+                background-color: red !important;
+            }
+            .borda-vermelha {
+                border: 1px solid red;
+            }
+            .borda-azul{
+                border: 1px solid blue;
+            }
+            #cabecalho-um {
+                background-color: green;
+            }
+
+            /* O id tem prioridade nas caracteristicas, por isso o #cabecalho-um tem prioridade sobre o .fundo-vermelho 
+            Quando haver duplicidade, o navegador sempre irá aplicar o ultimo estilo
+            Se a tag tiver id ou class, o navegador irá aplicar o estilo do id ou da class
+            O comando !important não é recomendado, pois ele irá sobrepor o estilo do id ou da class
+            Utilizar class para selecionar varios elementos
+            */
+        </style>
+    </head>
+    <body>
+        <h1 id="cabecalho-um" class="fundo-vermelho borda-vermelha">
+            H1 titulo
+        </h1>
+        <h1 id="cabecalho-dois" class="fundo-vermelho borda-azul">
+            H1 titulo 2
+        </h1>
+        <p>Não estou sendo afetado</p>
+    </body>
+</html>
