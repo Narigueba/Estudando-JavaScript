@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.pai h1~p { 
+    color: red;
+}
+
+[meu-atributo] {
+    color: blue;
+}
+
+[meu-atributo="A"] {
+    color: green;
+}
+
+[meu-atributo="B"] {
+    color: pink;
+}
