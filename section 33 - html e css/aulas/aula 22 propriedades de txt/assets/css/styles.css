@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+html {
+    font-size: 62.5%;
+}
+
+p {
+    font-size: 2.0rem;
+    /* font-style: italic;
+    font-weight: bold;
+    direction: ltr;
+    letter-spacing: 0.5rem;
+    word-spacing: 0.5rem;
+    line-height: 2.5rem; */
+    text-align: left;
+    /* text-decoration: underline; */
+    text-indent: 5.0rem;
+    text-shadow: 0.2rem -0.2rem 0.1rem red;
+    text-transform: capitalize;
+}
