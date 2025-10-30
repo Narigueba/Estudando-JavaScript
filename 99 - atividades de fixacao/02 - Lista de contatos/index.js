@@ -53,4 +53,4 @@ function removerContato(nome) {
     }
 };
 
-console.log(removerContato('Guilherme'))
+console.log(removerContato('Guilherme')) // não funcionou, preciso rever
