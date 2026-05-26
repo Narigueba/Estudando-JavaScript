@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Formulário de carros</title>
+        <link rel="stylesheet" href="./assets/css/style.css" />
+    </head>
+    <body>
+        <section class="container">
+
+            <h1 class="titulo"> 🚗 Sistema de estoque de veiculos</h1>
+
+            <form action="/" method="post" class="formulario">
+                <label for="">Marca</label>
+                <input type="text" class="marca validar">
+                
+                <label for="">Modelo</label>
+                <input type="text" class="modelo validar">
+                
+                <label for="">Ano Modelo</label>
+                <input type="text" class="ano-modelo validar">
+
+                <label for="">Placa</label>
+                <input type="text" class="placa validar" placeholder="ABC-1D23">
+
+                <label for="">Cor</label>
+                <input type="text" class="cor validar">
+
+                <button type="submit">Enviar</button>
+            </form>
+
+            <div class="lista-carros">
+                <h2>Carros cadastrados</h2>
+                <div class="carros-container"></div>
+            </div>
+
+            
+        </section>
+
+        <script src="./assets/js/main.js"></script>
+    </body>
+</html>

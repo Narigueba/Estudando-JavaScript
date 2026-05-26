@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="classe-um"></div> <!-- div.classe-um  -->
+    <div class="classe-um classe-2">A</div> <!-- div.classe-um.classe-2  -->
+    <div id="classe-um"></div>  <!-- div#classe-um  -->
+    <div id="meu-id" class="classe outra-classe"></div> <!-- div#meu-id.classe.outra-classe  -->
+    <div id="meu-id" class="classe outra-classe">conteudo</div> <!-- div#meu-id.classe.outra-classe{conteudo}  -->  
+
+    <div id="meu-id" class="classe">meu conteudo</div>
+    <div id="meu-id" class="classe">meu conteudo</div> <!-- div#meu-id.classe{meu conteudo}*3  -->
+    <div id="meu-id" class="classe">meu conteudo</div> 
+    
+    <!-- ul>li*2{conteudo}*3  -->
+    <ul>
+        <li>conteudo 1</li>
+        <li>conteudo 2</li> 
+        <li>conteudo 3</li>
+    </ul>
+
+    <!-- ul>(li>a{conteudo})*3  -->
+    <ul>
+        <li><a href="">conteudo</a></li>
+        <li><a href="">conteudo</a></li> 
+        <li><a href="">conteudo</a></li>
+    </ul>
+
+    <!-- div#meu-id.minha-classe>h1{Conteudo}+(p{Paragrafo}>a{link}+{clique aqui para saber mais})*2  -->
+    <div id="meu-id" class="minha-classe">
+        <h1>Conteudo</h1>
+        <p>Paragrafo<a href="">link</a>clique aqui para saber mais</p> 
+        <p>Paragrafo<a href="">link</a>clique aqui para saber mais</p>
+        
+
+    </div>
+</body>
+</html>

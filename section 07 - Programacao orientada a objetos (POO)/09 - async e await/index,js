@@ -1,0 +1,56 @@
+function rand(min, max) {
+    min *= 1000;
+    max *= 1000;
+
+    return Math.floor(Math.random() * (min - max) + min);
+}
+
+function espera(msg, tempo) {
+    return new Promise((resolve, reject) => {
+        
+        setTimeout(() => {
+            if(typeof msg !== 'string') {
+            reject('CAI NO ERRO');
+            return
+        }
+            resolve(msg.toUpperCase() + ' - Passei na Promise');  
+            return  
+        }, tempo);
+    });
+}
+
+async function executa() {
+
+    try {
+        const faseUm = await espera('Fase 1', rand(4, 5));
+        console.log(faseUm);
+
+        const faseDois = await espera(2, rand());
+        console.log(faseDois);
+
+        const faseTres = await espera('Fase 3', rand());
+        console.log(faseTres);
+        
+        console.log('Terminamos na fase 3: ', faseTres)
+    
+    } catch(e) {
+        console.log(e)
+    }
+    
+}
+
+executa()
+
+// espera('Fase 1', rand())
+//     .then(valor => {
+//         console.log(valor);
+//         return espera('Fase 2', rand());
+//     })
+//     .then(fase => {
+//         console.log(fase);
+//         return espera('Fase 3', rand())
+//     })
+//     .then(fase => {
+//         console.log(fase);
+//     })
+//     .catch(e => console.log(e))

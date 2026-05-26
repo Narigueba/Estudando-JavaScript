@@ -1,0 +1,26 @@
+* {
+    /* margin: 0;
+    padding: 0; */
+    font-family: sans-serif;
+}
+
+ul li::after {
+    content: ' - ';
+    background: cyan;
+}
+
+p::first-letter{
+    font-size: 50px ;
+}
+
+p::first-line {
+    color: red;
+}
+
+p::selection {
+    background: cyan;
+}
+
+::placeholder {
+    color: red;
+}

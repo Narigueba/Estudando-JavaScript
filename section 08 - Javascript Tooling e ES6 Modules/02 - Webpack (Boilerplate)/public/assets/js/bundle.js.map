@@ -1,0 +1,1 @@
+{"version":3,"file":"bundle.js","mappings":"AAAAA,MAAM","sources":["webpack://section-08---javascript-tooling-e-es6-modules/./src/index.js"],"sourcesContent":["alert('Olá mundo')"],"names":["alert"],"ignoreList":[],"sourceRoot":""}
