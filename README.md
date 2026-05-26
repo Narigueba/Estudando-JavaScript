@@ -1,2 +1,0 @@
-# Estudando-JavaScript
-
