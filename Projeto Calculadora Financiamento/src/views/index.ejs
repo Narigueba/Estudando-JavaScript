@@ -1,0 +1,53 @@
+<%- include('includes/head') %>
+
+    <div class="container text-center my-5">
+        <h1>Calcular Financiamento</h1>
+    </div>
+
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-4">
+                <form action="/calcular" method="POST">
+                    <div class="mb-3">
+                        <label class="form-label">Valor do Veiculo</label>
+                        <input type="text" name="valorVeiculo" class="form-control" id="valor-veiculo">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Valor de Entrada</label>
+                        <input type="text" name="valorEntrada" class="form-control" id="valor-entrada">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Calcular</button>
+                </form>
+
+                <% if(resultado) { %>
+                    <p>
+                        <ul>
+                            <li>Valor do veiculo: <%= valorVeiculo.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) %></li>
+                            <li>Valor de entrada: <%= valorEntrada.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) %></li>
+                            <li>Valor Financiado: <%= valorFinanciado.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) %></li>
+                        </ul>
+                    </p>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Prazo</th>
+                                <th>Parcela</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% resultado.forEach(r => { %>
+                                <tr>
+                                    <td><%= r.prazo %>x</td>
+                                    <td><%= r.parcela.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) %></td>    
+                                </tr>
+                            <% }); %>
+                        </tbody>
+                    </table>
+                <% } %>
+
+            </div>
+        </div>
+    </div>
+
+
+    <%- include('includes/footer') %>
